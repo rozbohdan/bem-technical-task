@@ -1,0 +1,21 @@
+//settings
+@import "../../settings/app.settings.style";
+
+.cards {
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px 30px;
+
+  &_multiple-cols {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
+
+    @media screen and (min-width: $screen-sm-min) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+
+  &_m-vertical-tiny {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}

@@ -1,0 +1,92 @@
+//settings
+@import "../settings/app.colors.style";
+@import "../settings/app.settings.style";
+
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: $screen-md-min) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    width: 992px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $screen-xl-min) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $screen-xxl-min) {
+    width: 1400px;
+    margin: 0 auto;
+  }
+
+  &_large {
+    @media screen and (min-width: $screen-xl-min) {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_with-aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @media screen and (min-width: $screen-md-min) {
+      grid-template-columns: 1fr 300px;
+    }
+  }
+
+  &_multiple-columns {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    @media screen and (min-width: $screen-md-min) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    &_media-mobile {
+      @media screen and (min-width: $screen-md-min) {
+        display: none;
+      }
+    }
+
+    &_align-center {
+      align-items: center;
+    }
+
+    &_justify-end {
+      justify-content: flex-end;
+    }
+
+    &_justify-center {
+      justify-content: center;
+    }
+  }
+}
+

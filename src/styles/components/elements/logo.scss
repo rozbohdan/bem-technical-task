@@ -1,0 +1,127 @@
+//settings
+@import "../../settings/app.settings.style";
+@import "../../settings/app.colors.style";
+
+.logo {
+  &_main {
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+    max-height: 37px;
+
+    @media screen and (min-width: $screen-tin) {
+      max-width: 244px;
+    }
+
+    @media screen and (min-width: $screen-xl-min) {
+      flex-direction: row;
+      align-items: flex-end;
+      max-width: 530px;
+      max-height: 32px;
+    }
+  }
+
+  &_middle {
+    height: 123px;
+  }
+
+  &_middle-extra {
+    width: 80px;
+    height: 70px;
+
+    @media screen and (min-width: $screen-tin) {
+      width: 115px;
+      height: 91px;
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+      width: 154px;
+      height: 105px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &_object-fit-none {
+      object-fit: none;
+    }
+
+    &_main {
+      width: calc(100% - 28px);
+
+      @media screen and (min-width: $screen-lg-min) {
+        padding-top: 6px;
+      }
+
+      @media screen and (min-width: $screen-xl-min) {
+        padding-top: 0;
+        object-fit: none;
+        width: calc(100% - 42px);
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 28px;
+    margin-top: 2px;
+
+    @media screen and (min-width: $screen-xl-min) {
+      margin-left: 10px;
+      margin-top: 0;
+    }
+  }
+
+  &__span-group {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 22px;
+    max-height: 22px;
+
+    @media screen and (min-width: $screen-xl-min) {
+      min-width: 32px;
+      max-width: 32px;
+      min-height: 32px;
+      max-height: 32px;
+    }
+
+    &_m-right-sm {
+      margin-right: 6px;
+
+      @media screen and (min-width: $screen-xl-min) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__span {
+    min-width: 11px;
+    max-width: 11px;
+    min-height: 11px;
+    max-height: 11px;
+    background-color: $background-default-gray;
+
+    @media screen and (min-width: $screen-xl-min) {
+      min-width: 16px;
+      max-width: 16px;
+      min-height: 16px;
+      max-height: 16px;
+    }
+
+    &_primary {
+      background-color: $background-primary;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    &_align-end {
+      align-items: flex-end;
+    }
+  }
+}

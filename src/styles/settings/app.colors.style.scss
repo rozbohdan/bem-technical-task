@@ -1,0 +1,36 @@
+//colors
+$primary-dark:       #00344F;
+$primary:            #094B6D;
+$primary-lighter:    #195270;
+$primary-light:      #76919F;
+$accent:             #FA9B00;
+$supportive-dark:    #353535;
+$supportive:         #F7F7F7;
+$supportive-lighter: #F6F6F6;
+$default-dark:       #000000;
+$default-gray:       #DFDFDF;
+$default-light:      #EEEEEE;
+$default:            #ffffff;
+
+//text
+$text-light:            $default;
+$text-dark:             $default-dark;
+$text-supportive-dark:  $supportive-dark;
+$text-primary:          $primary;
+$text-primary-light:    $primary-light;
+$text-accent:           $accent;
+
+//background
+$background-default:            $default;
+$background-default-gray:       $default-gray;
+$background-default-light:      $default-light;
+$background-accent:             $accent;
+$background-primary-dark:       $primary-dark;
+$background-primary:            $primary;
+$background-primary-lighter:    $primary-lighter;
+$background-supportive:         $supportive;
+$background-supportive-lighter: $supportive-lighter;
+
+//border
+$border-default-gray:  $default-gray;
+$border-default-light: $default-light;

@@ -1,0 +1,55 @@
+//settings
+@import "../../settings/app.settings.style";
+@import "../../settings/app.colors.style";
+
+.nav {
+  display: flex;
+  gap: 16px;
+
+  @media screen and (min-width: $screen-xl-min) {
+    gap: 16px 32px;
+  }
+
+  &_burger-menu {
+    @media screen and (max-width: $screen-md-min) {
+      position: fixed;
+      top: 98px;
+      left: 0;
+      bottom: 0;
+      background-color: $background-primary-dark;
+      height: calc(100vh - 98px);
+      width: 100%;
+      max-width: 320px;
+      flex-direction: column;
+      padding: 28px;
+      align-items: flex-start;
+      transition: 0.3s;
+      transform: translateX(-100%);
+      z-index: 1;
+      opacity: 0;
+    }
+  }
+
+  &_burger-menu-opened {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &_no-wrap {
+    white-space: nowrap;
+  }
+
+  &_overflow {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    font-size: $font-size-15;
+    line-height: $line-height-18;
+    color: $text-light;
+  }
+}

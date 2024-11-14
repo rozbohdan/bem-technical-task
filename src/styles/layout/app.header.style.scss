@@ -1,0 +1,35 @@
+//settings
+@import "../settings/app.settings.style";
+@import "../settings/app.colors.style";
+
+.header {
+  background-color: $background-primary-dark;
+  padding: 6px 0;
+
+  @media screen and (min-width: $screen-md-min) {
+    padding: 10px 0;
+  }
+
+  &__left {
+    @media screen and (min-width: $screen-md-min) {
+      width: 70%;
+    }
+
+    @media screen and (min-width: $screen-xl-min) {
+      width: 80%;
+    }
+  }
+
+  &__right {
+    text-align: right;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-left: 20px;
+      width: 30%;
+    }
+
+    @media screen and (min-width: $screen-xl-min) {
+      width: 20%;
+    }
+  }
+}

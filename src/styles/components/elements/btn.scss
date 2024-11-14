@@ -1,0 +1,69 @@
+//settings
+@import "../../settings/app.settings.style";
+@import "../../settings/app.colors.style";
+
+.btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &_media-desktop {
+    @media screen and (max-width: $screen-lg-min) {
+      display: none;
+    }
+  }
+
+  &_middle {
+    height: 39px;
+    padding: 0 22px;
+  }
+
+  &_primary {
+    color: $text-primary;
+  }
+
+  &_accent-bg {
+    background-color: $background-accent;
+    color: $text-light;
+  }
+
+  &_br-lg {
+    border-radius: $border-radius-lg;
+  }
+
+  &_small-text {
+    font-size: $font-size-12;
+    line-height: $line-height-14;
+  }
+
+  &_small-md-text {
+    font-size: $font-size-13;
+    line-height: $line-height-16;
+  }
+
+  &_bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &_underline {
+    text-decoration: underline;
+  }
+
+  &_capitalize {
+    text-transform: capitalize;
+  }
+
+  &_with-arrow {
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-left: 3px solid $background-primary;
+      margin-left: 5px;
+    }
+  }
+}

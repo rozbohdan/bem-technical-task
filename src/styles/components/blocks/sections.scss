@@ -1,0 +1,64 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.section {
+  &_light {
+    background-color: $background-default;
+  }
+
+  &_supportive {
+    background-color: $background-supportive;
+  }
+
+  &_p-top-middle {
+    padding-top: 12px;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-top: 28px;
+    }
+  }
+
+  &_p-top-large-extra {
+    padding-top: 15px;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-top: 40px;
+    }
+  }
+
+  &_p-bottom-middle-extra {
+    padding-bottom: 18px;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &_p-bottom-large {
+    padding-bottom: 26px;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-bottom: 38px;
+    }
+  }
+
+  &_p-vertical-sm-middle {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &_p-vertical-md {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &_relative {
+    position: relative;
+  }
+}

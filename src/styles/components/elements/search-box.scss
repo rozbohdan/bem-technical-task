@@ -1,0 +1,70 @@
+//settings
+@import "../../settings/app.settings.style";
+@import "../../settings/app.colors.style";
+
+.search-box {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: $screen-md-min) {
+    border: 1px solid $border-default-gray;
+    background: $background-default;
+    border-radius: $border-radius-md;
+    padding-left: 17px;
+    min-width: 284px;
+    height: 39px;
+    overflow: hidden;
+  }
+
+  &_opened {
+    @media screen and (max-width: $screen-md-min) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100%;
+      flex-direction: row-reverse;
+      padding: 15px 20px 18px 20px;
+      border-top: 1px solid $border-default-gray;
+      border-bottom: 1px solid $border-default-gray;
+      background: $background-default;
+      overflow: hidden;
+
+      .search-box__input {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    min-width: 17px;
+    max-width: 17px;
+    min-height: 17px;
+    max-height: 17px;
+    background: url("../../assets/images/search-icon.svg") no-repeat;
+
+    @media screen and (min-width: $screen-md-min) {
+      margin-right: 15px;
+    }
+  }
+
+  &__input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-right: 17px;
+    font-size: $font-size-13;
+    line-height: $line-height-16;
+    color: $text-primary-light;
+
+    @media screen and (max-width: $screen-md-min) {
+      display: none;
+    }
+
+    &::placeholder {
+      color: $text-primary-light;
+    }
+  }
+}

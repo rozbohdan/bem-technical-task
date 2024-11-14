@@ -1,0 +1,15 @@
+//settings
+@import "../../settings/app.settings.style";
+
+.form {
+  display: flex;
+  gap: 14px;
+
+  @media screen and (min-width: $screen-xl-min) {
+    gap: 26px;
+  }
+
+  &_align-center {
+    align-items: center;
+  }
+}

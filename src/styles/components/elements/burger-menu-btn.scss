@@ -1,0 +1,65 @@
+//settings
+@import "../../settings/app.colors.style";
+
+.burger-menu-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 14px;
+  height: 10px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &_transformed {
+    &:before,
+    &:after {
+      opacity: 0;
+    }
+
+    .burger-menu-btn__span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    min-width: 14px;
+    max-width: 14px;
+    min-height: 2px;
+    max-height: 2px;
+    background-color: $background-primary-lighter;
+    transition-property: opacity, visibility;
+    transition-duration: .3s;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &__span {
+    position: absolute;
+    content: '';
+    background-color: $background-primary-lighter;
+    transition-property: transform;
+    transition-duration: .3s;
+    min-width: 14px;
+    max-width: 14px;
+    min-height: 2px;
+    max-height: 2px;
+  }
+}

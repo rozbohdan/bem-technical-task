@@ -1,0 +1,79 @@
+//settings
+@import "../../settings/app.colors.style";
+@import "../../settings/app.settings.style";
+
+.select {
+  min-width: 112px;
+  position: relative;
+  display: flex;
+
+  &_media-desktop {
+    @media screen and (max-width: $screen-lg-min) {
+      display: none;
+    }
+  }
+
+  &__selected-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__selected-title {
+    color: $text-dark;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-15;
+    line-height: $line-height-18;
+  }
+
+  &__arrow {
+    transition: 0.3s;
+    margin-left: 10px;
+
+    &_rotate {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    z-index: 1;
+    transition: 0.3s;
+    overflow: auto;
+    max-height: 0;
+    opacity: 0;
+
+    &_opened {
+      max-height: 200px;
+      opacity: 1;
+    }
+  }
+
+  &__list-item {
+    transition: 0.3s;
+    padding: 10px;
+    color: $text-dark;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-15;
+    line-height: $line-height-18;
+    background-color: $background-default;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      background-color: $background-default-light;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}

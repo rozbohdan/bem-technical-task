@@ -1,0 +1,29 @@
+//settings
+@import "../settings/app.colors.style";
+@import "../settings/app.settings.style";
+
+html {
+  font-family: sans-serif;
+  line-height: $line-height-18;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: $app-font;
+  font-size: $font-size-16;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-24;
+  color: $text-dark;
+  text-align: left;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+  background-color: $background-supportive-lighter;
+}
